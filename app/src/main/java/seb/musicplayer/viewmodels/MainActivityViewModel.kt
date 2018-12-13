@@ -1,6 +1,6 @@
 package seb.musicplayer.viewmodels
 
-import android.arch.lifecycle.*
+import androidx.lifecycle.*
 import android.util.Log
 import seb.musicplayer.dagger.MediaSessionConnection
 import seb.musicplayer.model.Event

@@ -1,6 +1,6 @@
 package seb.musicplayer.dagger
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import android.content.ComponentName
 import android.content.Context
 import android.media.MediaMetadata

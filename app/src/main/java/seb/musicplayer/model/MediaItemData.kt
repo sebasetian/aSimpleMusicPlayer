@@ -1,7 +1,7 @@
 package seb.musicplayer.model
 
 import android.net.Uri
-import android.support.v7.util.DiffUtil
+import androidx.recyclerview.widget.DiffUtil
 
 data class MediaItemData(
     val mediaId: String,

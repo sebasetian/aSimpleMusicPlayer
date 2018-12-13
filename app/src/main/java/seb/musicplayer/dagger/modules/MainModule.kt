@@ -1,6 +1,6 @@
 package seb.musicplayer.dagger.modules
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.content.ComponentName
 import android.content.Context
 import dagger.Module

@@ -1,11 +1,15 @@
-package seb.musicplayer
+package seb.musicplayer.activities
 
+import android.media.AudioManager
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import seb.musicplayer.R
+import seb.musicplayer.viewmodels.MainActivityViewModel
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+    @Inject lateinit var activityViewModel: MainActivityViewModel
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -28,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        volumeControlStream = AudioManager.STREAM_MUSIC
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }

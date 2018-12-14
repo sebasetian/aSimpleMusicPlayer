@@ -12,6 +12,7 @@ import seb.musicplayer.model.MediaItemData
 import seb.musicplayer.viewmodels.MainActivityViewModel
 import kotlinx.android.synthetic.main.fragment_mediaitem_list.list
 import kotlinx.android.synthetic.main.fragment_mediaitem_list.loadingSpinner
+import seb.musicplayer.viewmodels.MediaItemFragmentViewModel
 
 class MediaItemFragment: Fragment() {
     private lateinit var mediaId: String

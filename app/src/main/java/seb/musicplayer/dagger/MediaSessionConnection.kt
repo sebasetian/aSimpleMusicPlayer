@@ -3,10 +3,8 @@ package seb.musicplayer.dagger
 import androidx.lifecycle.MutableLiveData
 import android.content.ComponentName
 import android.content.Context
-import android.media.MediaMetadata
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaMetadataCompat
-import android.support.v4.media.session.IMediaControllerCallback
 import android.support.v4.media.session.MediaControllerCompat
 import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
@@ -114,14 +112,15 @@ class MediaSessionConnection(context: Context, serviceComponent: ComponentName) 
                 }
     }
 
-    @Suppress("PropertyName")
-    val EMPTY_PLAYBACK_STATE: PlaybackStateCompat = PlaybackStateCompat.Builder()
-        .setState(PlaybackStateCompat.STATE_NONE,0,0f)
-        .build()
-
-    @Suppress("PropertyName")
-    val NOTHING_PLAYING: MediaMetadataCompat = MediaMetadataCompat.Builder()
-        .putString(MediaMetadataCompat.METADATA_KEY_MEDIA_ID,"")
-        .putLong(MediaMetadataCompat.METADATA_KEY_DURATION, 0)
-        .build()
 }
+
+@Suppress("PropertyName")
+val EMPTY_PLAYBACK_STATE: PlaybackStateCompat = PlaybackStateCompat.Builder()
+    .setState(PlaybackStateCompat.STATE_NONE,0,0f)
+    .build()
+
+@Suppress("PropertyName")
+val NOTHING_PLAYING: MediaMetadataCompat = MediaMetadataCompat.Builder()
+    .putString(MediaMetadataCompat.METADATA_KEY_MEDIA_ID,"")
+    .putLong(MediaMetadataCompat.METADATA_KEY_DURATION, 0)
+    .build()
